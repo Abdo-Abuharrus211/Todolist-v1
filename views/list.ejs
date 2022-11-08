@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To-Do List</title>
+  <!-- Linking external css -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="box" id="heading">
+    <h1><%= kindOfDay %>'s Todo List: </h1>
+  </div>
+
+  <div class="box">
+    <!-- Our actual list... -->
+    <% for (var i = 0; i<newListItems.length; i ++) { %>
+    <div class="item">
+      <input type="checkbox" name="" value="">
+      <p><%= newListItems[i]%></p>
+    </div>
+
+    <% } %>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="button">+</button>
+    </form>
+  </div>
+
+
+
+
+  <!-- This H1 tag include a EJS marker enabeling us to pass a variable as data into it -->
+  <!-- <h1><%= kindOfDay %>'s list</h1> -->
+
+</body>
+
+</html>
